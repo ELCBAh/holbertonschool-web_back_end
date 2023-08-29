@@ -12,9 +12,9 @@ def safe_first_element(lst):
 from typing import Union, Sequence, Any
 
 
-def safe_first_element(list: Sequence[Any]) -> Union[Any, None]:
+def safe_first_element(lst: Sequence[Any]) -> Union[Any, None]:
     """return typing elements"""
-    if list:
-        return list[0]
+    if lst:
+        return lst[0]
     else:
         return None
