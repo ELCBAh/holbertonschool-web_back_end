@@ -3,7 +3,6 @@
 async coroutine that takes int as argument and returns float
 """
 import asyncio
-from typing import Generator
 import random
 
 
