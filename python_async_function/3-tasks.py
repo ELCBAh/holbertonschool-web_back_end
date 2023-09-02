@@ -10,7 +10,7 @@ from typing import List
 wait_random = __import__('0-basic_async_syntax').wait_random
 
 
-async def task_wait_random(max_delay: int) -> float:
+async def task_wait_random(max_delay: int) -> asyncio.Task:
     """
     task_wait_random function
     """
