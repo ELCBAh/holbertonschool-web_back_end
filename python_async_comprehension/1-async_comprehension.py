@@ -10,7 +10,7 @@ from typing import List
 async_generator = __import__('0-async_generator').async_generator
 
 
-async def async_comprehension() -> List[Float]:
+async def async_comprehension() -> List[float]:
     """
     Coroutine that will loop 10 times, each time asynchronously wait 1 second
     then yield a random number between 0 and 10.
