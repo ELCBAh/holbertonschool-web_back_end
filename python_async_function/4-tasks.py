@@ -4,14 +4,16 @@ Take the code from wait_n and alter it into a new function task_wait_n. The code
 """
 import asyncio
 import random
+from typing import List
 
 
-wait_n = __import__('3-tasks').wait_n
+task_wait_random = __import__('0-basic_async_syntax').task_wait_random
 
 
-def task_wait_n(n: int, max_delay: int) -> asyncio.Task:
+async def task_wait_n(n: int, max_delay: int) -> list:
     """
     task_wait_n function
     """
-    return asyncio.create_task(wait_n(n, max_delay))
+    tasks = [task_wait_random(max_delay) for _ in range(n)]
+    return [await task for task in asyncio.as_completed(tasks)]
 
