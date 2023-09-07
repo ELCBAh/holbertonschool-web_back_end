@@ -12,4 +12,4 @@ def list_all(mongo_collection):
 
 
 if __name__ == "__main__":
-    list_all(mongo_collection):
+    list_all(mongo_collection)
