@@ -15,7 +15,7 @@ if __name__ == "__main__":
     print("Methods:")
     for method in methods:
         print(f"\tmethod {method}: \
-            {method} {collection.count_documents({'method': method})}")
+            {collection.count_documents({'method': method})}")
     print(f"{collection.count_documents({'method': 'GET', 'path': '/status'})}\
-         status check")
+        status check")
     client.close()
