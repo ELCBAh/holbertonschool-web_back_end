@@ -14,7 +14,8 @@ if __name__ == "__main__":
     methods = ["GET", "POST", "PUT", "PATCH", "DELETE"]
     print("Methods:")
     for method in methods:
-        print(f"{collection.count_documents({'\tmethod': method})} {method}")
-    print(f"{collection.count_documents({'\tmethod': 'GET', 'path': '/status'})}\
-        GET /status")
+        print(f"\tmethod: {method}: \
+            {collection.count_documents({'method': method})} {method}")
+    print(f"{collection.count_documents({'method': 'GET', 'path': '/status'})}\
+        status check")
     client.close()
