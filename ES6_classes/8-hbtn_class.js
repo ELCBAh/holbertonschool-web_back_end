@@ -5,7 +5,7 @@ export default class HolbertonClass {
   }
 
   toString() {
-    return `[object ${this._location}]`;
+    return this._location;
   }
 
   valueOf() {
